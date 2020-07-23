@@ -19,7 +19,7 @@ class PersonModelSerializer(serializers.ModelSerializer):
 class MoviesModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Movies
-        fields = ('id','title','release_year','actors')
+        fields = ('id','title','release_year','actors','directors','producer')
 
 
 class PersonSerializer(serializers.Serializer):
