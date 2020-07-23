@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from rest_framework.parsers import JSONParser
 from .models import Person,Movies
 
-from .utils import get_json_list,int_to_Roman
+from .utils import get_json_list,convert_int_to_Roman
 import json
 from django.core.serializers.json import DjangoJSONEncoder
 from django.core import serializers as rei
@@ -84,7 +84,7 @@ class MoviesSerializer(serializers.ModelSerializer):
     producers = serializers.SerializerMethodField('get_producer_movies')
 
     def get_roman_numbers(self,obj):
-        return int_to_Roman(self,obj.release_year)
+        return convert_int_to_Roman(self,obj.release_year)
 
     def get_actor_movies(self,obj):
         try:
