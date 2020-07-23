@@ -9,11 +9,4 @@ urlpatterns = [
     path('movie/<int:id>', movie_detail),
 ]
 
-''''
-GET person/
-GET person/detail
-POST person/add
-PUT person/<id>
-DELETE person/<id>
-'''
 
