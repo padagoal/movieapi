@@ -1,0 +1,9 @@
+movieapi_env
+.idea
+*.pyc
+*/*.pyc
+.DS_Store
+*/__pycache__
+*/migrations
+./static
+/log
