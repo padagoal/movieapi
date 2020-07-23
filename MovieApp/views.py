@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse, JsonResponse
 from rest_framework.views import APIView
 from rest_framework.parsers import JSONParser
@@ -10,6 +10,9 @@ from rest_framework.permissions import IsAuthenticated, IsAuthenticatedOrReadOnl
 from .models import Person, Movies
 from .serializers import PersonSerializer, \
     MoviesSerializer,PersonModelSerializer, MoviesModelSerializer
+
+def index(request):
+    return redirect('person/')
 
 
 @api_view(['GET','POST'])

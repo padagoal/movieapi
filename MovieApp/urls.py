@@ -1,7 +1,8 @@
-from .views import person_list, movie_list,person_detail,movie_detail
+from .views import person_list, movie_list,person_detail,movie_detail,index
 from django.urls import path, include
 
 urlpatterns = [
+    path('',index),
     path('person/', person_list),
     path('movie/', movie_list),
 
